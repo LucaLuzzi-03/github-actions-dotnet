@@ -1,14 +1,12 @@
-name: Run every hour
+name: Run every 5 minute
 
 on:
   schedule:
-    - cron: "0 * * * *"
-
-permissions: {}
+  - cron: "*/5 * * * *"
 
 jobs:
   cron:
-    name: Run every hour
+    name: Run every 5 minutes
     runs-on: ubuntu-latest
 
     steps:

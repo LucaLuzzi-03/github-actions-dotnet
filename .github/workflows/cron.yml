@@ -12,3 +12,18 @@
 #     steps:
 #       - name: Hello world
 #         run: echo "Hello world"
+
+name: Do Nothing Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  do-nothing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dummy step that does nothing
+        run: echo "This workflow intentionally does nothing."
